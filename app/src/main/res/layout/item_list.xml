@@ -2,28 +2,41 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
-    android:layout_height="120dp"
+    android:layout_height="wrap_content"
     android:background="@drawable/border">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:padding="5dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:contentDescription="Icon" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:padding="5dp"
-        android:layout_toEndOf="@id/imageView"
-        android:layout_toRightOf="@id/imageView"
-        android:textStyle="bold"
-        android:gravity="center_vertical"
-        android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:text="Title" />
+
+        <ImageView
+            android:id="@+id/imageView_tv"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="matrix"
+            android:adjustViewBounds="true"
+            android:background="@drawable/loading_image"/>
+
+
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This will be the description of the post"
+            android:textSize="20sp"
+
+            />
+
+    </LinearLayout>
 
 </RelativeLayout>

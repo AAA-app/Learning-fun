@@ -14,15 +14,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aaa.homeworktojava.R;
-import com.aaa.homeworktojava.adapter.CarAdapter;
-import com.aaa.homeworktojava.adapter.GirlsAdapter;
-import com.aaa.homeworktojava.data.CarData;
-import com.aaa.homeworktojava.data.GirlsData;
+import com.aaa.homeworktojava.adapter.RvAdapter;
+import com.aaa.homeworktojava.data.DataClass;
 
 
 public class FragmentThree extends Fragment {
 
     public Context context;
+     RecyclerView recyclerView;
 
 
     public FragmentThree() {
@@ -40,29 +39,29 @@ public class FragmentThree extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        GirlsData[] girlsData= new GirlsData[]{
-                new GirlsData("Anna", R.drawable.girls1),
-                new GirlsData("Yulia",  R.drawable.girls2),
-                new GirlsData("Tami", R.drawable.girls3),
-                new GirlsData("Vika", R.drawable.girls4),
-                new GirlsData("Yana", R.drawable.girls5),
-                new GirlsData("Jenny", R.drawable.girls6),
-                new GirlsData("Lena", R.drawable.girls7),
-                new GirlsData("Anna", R.drawable.girls1),
-                new GirlsData("Yulia",  R.drawable.girls2),
-                new GirlsData("Tami", R.drawable.girls3),
-                new GirlsData("Vika", R.drawable.girls4),
-                new GirlsData("Yana", R.drawable.girls5),
-                new GirlsData("Jenny", R.drawable.girls6),
-                new GirlsData("Lena", R.drawable.girls7)
-
-        };
-
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
-        GirlsAdapter adapter = new GirlsAdapter(girlsData);
+//        DataClass[] dataClass= new DataClass[]{
+//                new DataClass("Anna", R.drawable.girls1),
+//                new DataClass("Yulia",  R.drawable.girls2),
+//                new DataClass("Tami", R.drawable.girls3),
+//                new DataClass("Vika", R.drawable.girls4),
+//                new DataClass("Yana", R.drawable.girls5),
+//                new DataClass("Jenny", R.drawable.girls6),
+//                new DataClass("Lena", R.drawable.girls7),
+//                new DataClass("Anna", R.drawable.girls1),
+//                new DataClass("Yulia",  R.drawable.girls2),
+//                new DataClass("Tami", R.drawable.girls3),
+//                new DataClass("Vika", R.drawable.girls4),
+//                new DataClass("Yana", R.drawable.girls5),
+//                new DataClass("Jenny", R.drawable.girls6),
+//                new DataClass("Lena", R.drawable.girls7)
+//
+//        };
+//
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+//                mAdapter = new RvAdapter(context, listData);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        recyclerView.setAdapter(adapter);
+//                recyclerView.setAdapter(mAdapter);
     }
 
 }

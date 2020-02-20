@@ -14,12 +14,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aaa.homeworktojava.R;
-import com.aaa.homeworktojava.adapter.CarAdapter;
-import com.aaa.homeworktojava.data.CarData;
+import com.aaa.homeworktojava.adapter.RvAdapter;
+import com.aaa.homeworktojava.data.DataClass;
 
 
 public class FragmentTwo extends Fragment {
     public Context context;
+    RecyclerView recyclerView;
 
 
     public FragmentTwo() {
@@ -37,28 +38,27 @@ public class FragmentTwo extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        CarData[] carData= new CarData[] {
-                new CarData("Vernon", R.drawable.car1),
-                new CarData("Jeep",  R.drawable.car2),
-                new CarData("Porsche", R.drawable.car3),
-                new CarData("Ford", R.drawable.car4),
-                new CarData("Lamborghini", R.drawable.car5),
-                new CarData("jeep", R.drawable.car6),
-                new CarData("Vernon", R.drawable.car1),
-                new CarData("Jeep",  R.drawable.car2),
-                new CarData("Porsche", R.drawable.car3),
-                new CarData("Ford", R.drawable.car4),
-                new CarData("Lamborghini", R.drawable.car5),
-                new CarData("jeep", R.drawable.car6),
-                new CarData("Ford", R.drawable.car7)
-        };
-
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
-        CarAdapter adapter = new CarAdapter(carData);
+//        DataClass[] dataClass= new DataClass[] {
+//                new DataClass("Vernon", R.drawable.car1),
+//                new DataClass("Jeep",  R.drawable.car2),
+//                new DataClass("Porsche", R.drawable.car3),
+//                new DataClass("Ford", R.drawable.car4),
+//                new DataClass("Lamborghini", R.drawable.car5),
+//                new DataClass("jeep", R.drawable.car6),
+//                new DataClass("Vernon", R.drawable.car1),
+//                new DataClass("Jeep",  R.drawable.car2),
+//                new DataClass("Porsche", R.drawable.car3),
+//                new DataClass("Ford", R.drawable.car4),
+//                new DataClass("Lamborghini", R.drawable.car5),
+//                new DataClass("jeep", R.drawable.car6),
+//                new DataClass("Ford", R.drawable.car7)
+//        };
+//
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+//                mAdapter = new RvAdapter(context, listData);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        recyclerView.setAdapter(adapter);
-
+//                recyclerView.setAdapter(mAdapter);
     }
 
 }
