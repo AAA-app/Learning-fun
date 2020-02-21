@@ -1,5 +1,6 @@
 package com.aaa.homeworktojava.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.aaa.homeworktojava.MainActivity;
 import com.aaa.homeworktojava.R;
 import com.aaa.homeworktojava.data.DataClass;
 import com.bumptech.glide.Glide;
@@ -24,10 +26,8 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
 
     //    private ArrayList<DataClass> imageDataClass;
     List<DataClass> imageDataClass;
-     Context context;
-    private ViewHolder viewHolder;
-    private int position;
-    private DataClass model = new DataClass();
+   private Context context;
+
 
 
     //RecyclerView recyclerView;
@@ -41,6 +41,10 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
         DataClass uploadInfo = imageDataClass.get(position);
         viewHolder.setDescription(uploadInfo.getDescription());
 
+        viewHolder.setImage(uploadInfo.getImage());
+
+
+
         viewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,7 +57,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
     @Override
     public RvAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_list, viewGroup, false);
-        return new RvAdapter.ViewHolder(view);
+        return new RvAdapter.ViewHolder(view, context);
     }
 
 
@@ -68,9 +72,12 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
         View mView;
         Context ctx;
 
-        public ViewHolder(View itemView) {
+        public ImageView image_pos;
+
+        public ViewHolder(View itemView, Context ctx) {
             super(itemView);
             mView = itemView;
+            this.ctx = ctx;
             this.relativeLayout = (RelativeLayout) mView.findViewById(R.id.relativeLayout);
         }
 
@@ -80,10 +87,9 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
         }
 
 
-        public void setImageUrl(Context ctx1 , String image) {
-
-            ImageView image_pos = (ImageView) mView.findViewById(R.id.imageView_tv);
-            Glide.with(ctx1).load(image).into(image_pos);
+        public void setImage( String image) {
+            image_pos = (ImageView) mView.findViewById(R.id.imageView_tv);
+            Glide.with(this.ctx).load(image).into(image_pos);
         }
     }
 }
