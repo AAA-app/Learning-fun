@@ -33,9 +33,9 @@ public class FragmentRadio extends Fragment {
 
     DatabaseReference mRef;
     RecyclerView recyclerView;
-    List<DataClass> listData = new ArrayList<>();
+    ArrayList<DataClass> listData;
     RvAdapter mAdapter;
-    ImageView mmm = MainActivity.mImageView;
+    ImageView toolbarImg = MainActivity.mImageView;
 
 
     public FragmentRadio() {
@@ -46,7 +46,7 @@ public class FragmentRadio extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mmm.setImageResource(R.drawable.music4);
+        toolbarImg.setImageResource(R.drawable.music4);
 //"News" here will reflect what you have called your database in Firebase.
         mRef = FirebaseDatabase.getInstance().getReference().child("DataRadio");
         mRef.keepSynced(true);
@@ -63,7 +63,7 @@ public class FragmentRadio extends Fragment {
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                listData = new ArrayList<DataClass>();
+                listData = new ArrayList<DataClass>();
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                     DataClass dataClass = dataSnapshot1.getValue(DataClass.class);
                     listData.add(dataClass);

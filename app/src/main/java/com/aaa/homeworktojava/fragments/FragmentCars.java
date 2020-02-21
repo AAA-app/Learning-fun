@@ -34,9 +34,9 @@ public class FragmentCars extends Fragment {
 
     DatabaseReference mRef;
     RecyclerView recyclerView;
-    List<DataClass> listData = new ArrayList<>();
+    ArrayList<DataClass> listData;
     RvAdapter mAdapter;
-    ImageView toolBarImg = MainActivity.mImageView;
+    ImageView toolbarImg = MainActivity.mImageView;
 
 
     public FragmentCars() {
@@ -47,7 +47,7 @@ public class FragmentCars extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        toolBarImg.setImageResource(R.drawable.car6);
+        toolbarImg.setImageResource(R.drawable.car6);
         //"News" here will reflect what you have called your database in Firebase.
         mRef = FirebaseDatabase.getInstance().getReference().child("DataCars");
         mRef.keepSynced(true);
@@ -65,7 +65,7 @@ public class FragmentCars extends Fragment {
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                listData = new ArrayList<DataClass>();
+               listData = new ArrayList<DataClass>();
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                     DataClass dataClass = dataSnapshot1.getValue(DataClass.class);
                     listData.add(dataClass);

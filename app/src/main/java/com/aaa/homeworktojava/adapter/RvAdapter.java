@@ -1,6 +1,5 @@
 package com.aaa.homeworktojava.adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,11 +8,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.aaa.homeworktojava.MainActivity;
 import com.aaa.homeworktojava.R;
 import com.aaa.homeworktojava.data.DataClass;
 import com.bumptech.glide.Glide;
@@ -25,13 +21,13 @@ import java.util.List;
 public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
 
     //    private ArrayList<DataClass> imageDataClass;
-    List<DataClass> imageDataClass;
+    ArrayList<DataClass> imageDataClass;
    private Context context;
 
 
 
     //RecyclerView recyclerView;
-    public RvAdapter(Context context, List<DataClass> imageDataClass) {
+    public RvAdapter(Context context, ArrayList<DataClass> imageDataClass) {
         this.imageDataClass = imageDataClass;
         this.context = context;
     }
