@@ -3,7 +3,10 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/border">
+    android:focusableInTouchMode="true"
+    android:background="#090646"
+    android:padding="5dp"
+    android:layout_marginBottom="2dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +17,7 @@
             android:id="@+id/title_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textStyle="bold"
             android:textSize="22sp"
             android:text="Title" />
@@ -23,7 +26,7 @@
             android:id="@+id/imageView_tv"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:scaleType="matrix"
+            android:scaleType="fitCenter"
             android:adjustViewBounds="true"
             android:background="@drawable/loading_image"/>
 
@@ -32,6 +35,7 @@
             android:id="@+id/description_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/whatColor"
             android:text="This will be the description of the post"
             android:textSize="20sp"
 

@@ -41,7 +41,8 @@ public class FragmentGirls extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        toolbarImg.setImageResource(R.drawable.girls6);
+
+
 //"News" here will reflect what you have called your database in Firebase.
         mRef = FirebaseDatabase.getInstance().getReference().child("DataGirls");
         mRef.keepSynced(true);
@@ -64,6 +65,7 @@ public class FragmentGirls extends Fragment {
                     listData.add(dataClass);
                 }
                 mAdapter = new RvAdapter(context, listData);
+                mAdapter.notifyDataSetChanged();
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setAdapter(mAdapter);
             }

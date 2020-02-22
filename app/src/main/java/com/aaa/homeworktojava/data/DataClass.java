@@ -4,10 +4,12 @@ public class DataClass {
 
     private String description;
     private String image;
+    private String radioUrl;
 
-    public DataClass(String description, String image) {
+    public DataClass(String description, String image, String radioUrl) {
         this.description = description;
         this.image = image;
+        this.radioUrl = radioUrl;
     }
 
     public DataClass() {
@@ -23,5 +25,12 @@ public class DataClass {
     }
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getRadioUrl() {
+        return radioUrl;
+    }
+    public void setRadioUrl(String radioUrl) {
+        this.radioUrl = radioUrl;
     }
 }

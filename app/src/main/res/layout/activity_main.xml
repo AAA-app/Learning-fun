@@ -23,14 +23,16 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:popupTheme="@style/Platform.MaterialComponents.Light">
 
+            <!--            <include layout="@layout/scrolling_image"/>-->
+
+
             <ImageView
                 android:id="@+id/image_tv_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:background="@android:color/white"
+                android:background="@android:color/background_dark"
                 android:fitsSystemWindows="true"
-                android:scaleType="centerCrop"
-                />
+                android:scaleType="fitCenter" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -38,10 +40,12 @@
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:tabBackground="@color/colorPrimaryDark"
             app:tabGravity="fill"
             app:tabIndicatorColor="@android:color/white"
             app:tabMaxWidth="0dp"
-            app:tabMode="fixed">
+            app:tabMode="fixed"
+            app:tabTextColor="@color/whatColor">
 
         </com.google.android.material.tabs.TabLayout>
 
@@ -51,6 +55,7 @@
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="fill"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     </androidx.viewpager.widget.ViewPager>

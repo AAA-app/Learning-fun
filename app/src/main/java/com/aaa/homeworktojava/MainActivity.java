@@ -13,6 +13,8 @@ import com.aaa.homeworktojava.fragments.FragmentCars;
 import com.aaa.homeworktojava.fragments.FragmentRadio;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.tabs.TabLayout;
+import com.q42.android.scrollingimageview.ScrollingImageView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
         if (getSupportActionBar() != null)
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+//        ScrollingImageView scrollingBackground = (ScrollingImageView)findViewById(R.id.scrolling_background);
+//        scrollingBackground.start();
+        //scrollingBackground.stop();  if i'm vant to stop the animation
 
         // first get our views
         mToolBar = findViewById(R.id.toolBar);

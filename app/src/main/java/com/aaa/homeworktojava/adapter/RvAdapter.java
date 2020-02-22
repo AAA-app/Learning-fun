@@ -20,8 +20,7 @@ import java.util.List;
 
 public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
 
-    //    private ArrayList<DataClass> imageDataClass;
-    ArrayList<DataClass> imageDataClass;
+    private ArrayList<DataClass> imageDataClass;
    private Context context;
 
 
@@ -83,7 +82,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
         }
 
 
-        public void setImage( String image) {
+        public void setImage(String image) {
             image_pos = (ImageView) mView.findViewById(R.id.imageView_tv);
             Glide.with(this.ctx).load(image).into(image_pos);
         }

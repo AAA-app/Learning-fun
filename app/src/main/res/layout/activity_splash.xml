@@ -3,16 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="#090646"
     tools:context=".MainActivity" >
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Java App"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="70sp"
+        android:text="Java App Music Online"
+        android:gravity="center"
+        android:textColor="#B9FFFFFF"
+        android:textSize="60dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,6 +52,7 @@
         android:id="@+id/textView"
         android:layout_width="92dp"
         android:layout_height="25dp"
+        android:textColor="@color/whatColor"
         android:layout_below="@+id/progressBar"
         android:layout_alignLeft="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="@+id/progressBar"
