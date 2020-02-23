@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         if (getSupportActionBar() != null)
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-//        ScrollingImageView scrollingBackground = (ScrollingImageView)findViewById(R.id.scrolling_background);
-//        scrollingBackground.start();
+        ScrollingImageView scrollingBackground = (ScrollingImageView)findViewById(R.id.scrolling_background);
+        scrollingBackground.start();
         //scrollingBackground.stop();  if i'm vant to stop the animation
 
         // first get our views
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         mTabLayout = findViewById(R.id.tabLayout);
         mViewPager = findViewById(R.id.viewPager);
 
-        mImageView =  findViewById(R.id.image_tv_toolbar);
+//        mImageView =  findViewById(R.id.image_tv_toolbar);
 
         mToolBar.setTitle("Java Tutorial");
         setupViewPager(mViewPager);

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:focusableInTouchMode="true"
-    android:background="#090646"
+    android:background="@drawable/background"
     android:padding="5dp"
     android:layout_marginBottom="2dp">
 
@@ -35,7 +35,7 @@
             android:id="@+id/description_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/whatColor"
+            android:textColor="@color/white"
             android:text="This will be the description of the post"
             android:textSize="20sp"
 
