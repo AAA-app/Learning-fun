@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-import com.aaa.homeworktojava.fragments.FragmentGirls;
-import com.aaa.homeworktojava.fragments.FragmentCars;
+import com.aaa.homeworktojava.fragments.FragmentKotlin;
+import com.aaa.homeworktojava.fragments.FragmentJava;
 import com.aaa.homeworktojava.fragments.FragmentRadio;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.tabs.TabLayout;
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         if (getSupportActionBar() != null)
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ScrollingImageView scrollingBackground = (ScrollingImageView)findViewById(R.id.scrolling_background);
+        ScrollingImageView scrollingBackground = (ScrollingImageView)findViewById(R.id.scrolling_background_ship);
         scrollingBackground.start();
         //scrollingBackground.stop();  if i'm vant to stop the animation
 
@@ -53,9 +53,9 @@ public class MainActivity extends AppCompatActivity {
     // nov create a function
     private void setupViewPager(ViewPager viewPager) {
         viewPagerAdapter adapter = new viewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new FragmentGirls(), "Girls");
+        adapter.addFragment(new FragmentJava(), "Java");
         adapter.addFragment(new FragmentRadio(), "Radio");
-        adapter.addFragment(new FragmentCars(), "Cars");
+        adapter.addFragment(new FragmentKotlin(), "Kotlin");
         viewPager.setAdapter(adapter);
     }
 

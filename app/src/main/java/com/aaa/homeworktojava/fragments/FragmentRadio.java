@@ -57,7 +57,7 @@ public class FragmentRadio extends Fragment {
 
 
     public FragmentRadio() {
-        // Required empty public constructor
+        // empty public constructor
     }
 
 

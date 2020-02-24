@@ -9,6 +9,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import com.aaa.homeworktojava.R;
 import com.aaa.homeworktojava.data.DataClass;
@@ -40,7 +41,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
 
 
 
-        viewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() {
+        viewHolder.constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(), "Click on Item: ", Toast.LENGTH_SHORT).show();
@@ -63,7 +64,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
 
     public static  class ViewHolder extends RecyclerView.ViewHolder {
 
-        public RelativeLayout relativeLayout;
+        public ConstraintLayout constraintLayout;
         View mView;
         Context ctx;
 
@@ -73,7 +74,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
             super(itemView);
             mView = itemView;
             this.ctx = ctx;
-            this.relativeLayout = (RelativeLayout) mView.findViewById(R.id.relativeLayout);
+            this.constraintLayout = (ConstraintLayout) mView.findViewById(R.id.layout);
         }
 
         public void setDescription(String desc) {

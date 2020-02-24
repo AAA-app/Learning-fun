@@ -1,9 +1,15 @@
 package com.aaa.homeworktojava.fragments;
 
 import android.content.Context;
+//import android.graphics.drawable.AnimationDrawable;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.AnimatorRes.*;
+//import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,8 +30,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 
-public class FragmentGirls extends Fragment {
-
+public class FragmentKotlin extends Fragment {
 
     DatabaseReference mRef;
     RecyclerView recyclerView;
@@ -34,7 +39,7 @@ public class FragmentGirls extends Fragment {
     ImageView toolbarImg = MainActivity.mImageView;
 
 
-    public FragmentGirls() {
+    public FragmentKotlin() {
         // Required empty public constructor
     }
 
@@ -42,11 +47,17 @@ public class FragmentGirls extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
 //"News" here will reflect what you have called your database in Firebase.
         mRef = FirebaseDatabase.getInstance().getReference().child("DataGirls");
         mRef.keepSynced(true);
-        return inflater.inflate(R.layout.rv_list, container, false);
+        View view =  inflater.inflate(R.layout.rv_list, container, false);
+        // Animation background ****
+//        ConstraintLayout constraintLayout = view.findViewById(R.id.layout);
+//        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
+//        animationDrawable.setEnterFadeDuration(20);
+//        animationDrawable.setExitFadeDuration(400);
+//        animationDrawable.start();
+        return view;
     }
 
     @Override
@@ -56,6 +67,10 @@ public class FragmentGirls extends Fragment {
 
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
+
+
+
+
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aaa.homeworktojava.R;
@@ -74,7 +75,7 @@ public class RadioAdapter extends RecyclerView.Adapter<RadioAdapter.ViewHolder> 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public RelativeLayout relativeLayout;
+        public ConstraintLayout constraintLayout;
         View mView;
         Context ctx;
         Button btnAction;
@@ -83,10 +84,10 @@ public class RadioAdapter extends RecyclerView.Adapter<RadioAdapter.ViewHolder> 
 
         public ViewHolder(View itemView, Context ctx) {
             super(itemView);
-            mView = itemView;
+            this.mView = itemView;
             this.ctx = ctx;
             btnAction = (Button)mView.findViewById(R.id.btnPlay_radio);
-            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.relativeLayout);
+            constraintLayout = (ConstraintLayout) itemView.findViewById(R.id.layout);
         }
 
         public void setDescription(String desc) {

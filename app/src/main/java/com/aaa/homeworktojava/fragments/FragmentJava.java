@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class FragmentCars extends Fragment {
+public class FragmentJava extends Fragment {
 
 
     DatabaseReference mRef;
@@ -39,7 +39,7 @@ public class FragmentCars extends Fragment {
     ImageView toolbarImg = MainActivity.mImageView;
 
 
-    public FragmentCars() {
+    public FragmentJava() {
         // Required empty public constructor
     }
 

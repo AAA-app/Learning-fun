@@ -2,12 +2,16 @@ package com.aaa.homeworktojava;
 
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.q42.android.scrollingimageview.ScrollingImageView;
 
 
 public class SplashActivity extends AppCompatActivity {
@@ -21,6 +25,18 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        ScrollingImageView scrollingBackground = (ScrollingImageView)findViewById(R.id.scrolling_background);
+        scrollingBackground.start();
+
+        // Animation background ****
+//        ConstraintLayout constraintLayout = findViewById(R.id.splash_layout);
+//        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground() ;
+//        animationDrawable.setEnterFadeDuration(20);
+//        animationDrawable.setExitFadeDuration(400);
+//        animationDrawable.start();
+
+
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         textView = (TextView) findViewById(R.id.textView);
         // Start long running operation in a background thread

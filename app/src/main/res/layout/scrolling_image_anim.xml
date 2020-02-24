@@ -16,19 +16,19 @@
 
 
         <com.q42.android.scrollingimageview.ScrollingImageView
-            android:id="@+id/scrolling_background"
+            android:id="@+id/scrolling_background_ship"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             scrolling_image_view:speed="1dp"
             scrolling_image_view:src="@drawable/foreground" />
 
-        <com.q42.android.scrollingimageview.ScrollingImageView
-            android:id="@+id/scrolling_foreground"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:scaleType="center"
-            scrolling_image_view:speed="15dp"
-            scrolling_image_view:src="@drawable/tach1" />
+<!--        <com.q42.android.scrollingimageview.ScrollingImageView-->
+<!--            android:id="@+id/scrolling_foreground"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:scaleType="center"-->
+<!--            scrolling_image_view:speed="15dp"-->
+<!--            scrolling_image_view:src="@drawable/tach1" />-->
 
     </FrameLayout>
 
