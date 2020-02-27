@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.opengl.Visibility;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -79,6 +80,7 @@ public class FragmentRadio extends Fragment {
 
         recyclerView = view.findViewById(R.id.recyclerView);
         seekBar = (SeekBar) view.findViewById(R.id.seekBar);
+        seekBar.setVisibility(View.VISIBLE) ;
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -95,10 +97,12 @@ public class FragmentRadio extends Fragment {
 
 
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
+
                 DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
                         linearLayoutManager.getOrientation());
                 recyclerView.setLayoutManager(linearLayoutManager);
                 recyclerView.addItemDecoration(dividerItemDecoration);
+
                 mAdapter.setOnItemClickListener(new RadioAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(final Button button, View view, final DataClass obj, int position) {

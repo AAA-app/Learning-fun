@@ -3,10 +3,34 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:focusableInTouchMode="true"
+    xmlns:scrolling_image_view="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/gradient_list"
     android:padding="5dp"
     android:layout_marginBottom="2dp"
     >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+
+        <com.q42.android.scrollingimageview.ScrollingImageView
+            android:id="@+id/scrolling_background_ship"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            scrolling_image_view:speed="0.2dp"
+            scrolling_image_view:src="@drawable/space3" />
+
+        <!--        <com.q42.android.scrollingimageview.ScrollingImageView-->
+        <!--            android:id="@+id/scrolling_foreground"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="100dp"-->
+        <!--            android:scaleType="center"-->
+        <!--            scrolling_image_view:speed="15dp"-->
+        <!--            scrolling_image_view:src="@drawable/tach1" />-->
+
+    </FrameLayout>
 
     <ImageView
         android:id="@+id/img_radio"
@@ -52,4 +76,5 @@
         android:layout_marginEnd="21dp"
         android:layout_marginRight="11dp"
         android:text="Play" />
+
 </RelativeLayout>

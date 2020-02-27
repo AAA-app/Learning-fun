@@ -21,10 +21,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/title_tv"
+            android:id="@+id/description_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Title"
+            android:gravity="center"
             android:textColor="#fff"
             android:textSize="22sp"
             android:textStyle="bold" />
@@ -38,13 +39,13 @@
             android:scaleType="fitCenter" />
 
 
-        <TextView
-            android:id="@+id/description_tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="This will be the description of the post"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+<!--        <TextView-->
+<!--            android:id="@+id/title_tv"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="This will be the description of the post"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="20sp" />-->
 
     </LinearLayout>
 
