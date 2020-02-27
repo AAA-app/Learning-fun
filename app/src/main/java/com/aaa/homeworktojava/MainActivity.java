@@ -8,8 +8,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
+import com.aaa.homeworktojava.fragments.FragmentAlgorithms;
+import com.aaa.homeworktojava.fragments.FragmentAnimation;
 import com.aaa.homeworktojava.fragments.FragmentKotlin;
 import com.aaa.homeworktojava.fragments.FragmentJava;
+import com.aaa.homeworktojava.fragments.FragmentLogic;
 import com.aaa.homeworktojava.fragments.FragmentRadio;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.tabs.TabLayout;
@@ -56,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new FragmentJava(), "Java");
         adapter.addFragment(new FragmentRadio(), "Radio");
         adapter.addFragment(new FragmentKotlin(), "Kotlin");
+        adapter.addFragment(new FragmentAnimation(), "Animation");
+        adapter.addFragment(new FragmentLogic(), "Logic");
+        adapter.addFragment(new FragmentAlgorithms(), "Algorithms");
         viewPager.setAdapter(adapter);
     }
 

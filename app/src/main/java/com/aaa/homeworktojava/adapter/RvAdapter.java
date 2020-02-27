@@ -32,6 +32,13 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
         this.context = context;
     }
 
+    @NonNull
+    @Override
+    public RvAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_list, viewGroup, false);
+        return new RvAdapter.ViewHolder(view, context);
+    }
+
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         DataClass uploadInfo = imageDataClass.get(position);
@@ -47,13 +54,6 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.ViewHolder> {
                 Toast.makeText(v.getContext(), "Click on Item: ", Toast.LENGTH_SHORT).show();
             }
         });
-    }
-
-    @NonNull
-    @Override
-    public RvAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_list, viewGroup, false);
-        return new RvAdapter.ViewHolder(view, context);
     }
 
 

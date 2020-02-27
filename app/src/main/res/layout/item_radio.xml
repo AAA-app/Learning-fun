@@ -19,16 +19,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scaleType="fitCenter"
-            scrolling_image_view:speed="0.2dp"
+            scrolling_image_view:speed="0.1dp"
             scrolling_image_view:src="@drawable/space3" />
 
-        <!--        <com.q42.android.scrollingimageview.ScrollingImageView-->
-        <!--            android:id="@+id/scrolling_foreground"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="100dp"-->
-        <!--            android:scaleType="center"-->
-        <!--            scrolling_image_view:speed="15dp"-->
-        <!--            scrolling_image_view:src="@drawable/tach1" />-->
 
     </FrameLayout>
 

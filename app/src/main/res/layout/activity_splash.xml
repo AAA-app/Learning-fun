@@ -18,9 +18,9 @@
             android:id="@+id/scrolling_background"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
             scrolling_image_view:speed="1dp"
-            scrolling_image_view:src="@mipmap/scrool_image_background" />
+            scrolling_image_view:src="@mipmap/screenbackground" />
     </FrameLayout>
 
     <com.tomer.fadingtextview.FadingTextView
@@ -53,6 +53,7 @@
         android:minWidth="200dp"
         android:minHeight="50dp"
         android:progress="1"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -75,6 +76,7 @@
         android:layout_width="92dp"
         android:layout_height="25dp"
         android:textColor="@color/white"
+        android:visibility="invisible"
         android:layout_below="@+id/progressBar"
         android:layout_alignLeft="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="@+id/progressBar"
@@ -90,7 +92,7 @@
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
         android:layout_marginBottom="64dp"
-        android:src="@drawable/java"
+        android:src="@drawable/android"
         app:layout_constraintBottom_toTopOf="@+id/progressBar_cyclic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
