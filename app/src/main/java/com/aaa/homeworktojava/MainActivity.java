@@ -56,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new FragmentRadio(), "Radio");
         adapter.addFragment(new FragmentKotlin(), "Kotlin");
         adapter.addFragment(new FragmentAnimation(), "Animation");
-        adapter.addFragment(new FragmentLogic(), "Logic");
-        adapter.addFragment(new FragmentAlgorithms(), "Algorithms");
+//        adapter.addFragment(new FragmentLogic(), "Logic");
+//        adapter.addFragment(new FragmentAlgorithms(), "Algorithms");
         viewPager.setAdapter(adapter);
     }
 
