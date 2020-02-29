@@ -5,12 +5,14 @@ import android.content.Context;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.AnimatorRes.*;
 //import android.graphics.drawable.AnimationDrawable;
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -22,6 +24,7 @@ import com.aaa.homeworktojava.MainActivity;
 import com.aaa.homeworktojava.R;
 import com.aaa.homeworktojava.adapter.RvAdapter;
 import com.aaa.homeworktojava.data.DataClass;
+import com.aaa.homeworktojava.webview.WebView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,11 +35,13 @@ import java.util.ArrayList;
 
 public class FragmentKotlin extends Fragment {
 
-    DatabaseReference mRef;
+
     RecyclerView recyclerView;
     ArrayList<DataClass> listData;
     RvAdapter mAdapter;
-    ImageView toolbarImg = MainActivity.mImageView;
+    Utils utils = new Utils();
+    //"DataClass" here will reflect what you have called your database in Firebase.
+    DatabaseReference mRef= utils.getmRef().child("DataGirls");
 
 
     public FragmentKotlin() {
@@ -46,17 +51,7 @@ public class FragmentKotlin extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-//"News" here will reflect what you have called your database in Firebase.
-        mRef = FirebaseDatabase.getInstance().getReference().child("DataGirls");
-        mRef.keepSynced(true);
         View view =  inflater.inflate(R.layout.rv_list, container, false);
-        // Animation background ****
-//        ConstraintLayout constraintLayout = view.findViewById(R.id.layout);
-//        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
-//        animationDrawable.setEnterFadeDuration(20);
-//        animationDrawable.setExitFadeDuration(400);
-//        animationDrawable.start();
         return view;
     }
 
@@ -83,6 +78,14 @@ public class FragmentKotlin extends Fragment {
                 mAdapter.notifyDataSetChanged();
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setAdapter(mAdapter);
+
+                utils.LayoutOptions(recyclerView,context);
+                mAdapter.setOnItemClickListener(new RvAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(ConstraintLayout view, View view1, DataClass obj, int position) {
+                        utils.clickWebview(getContext(), obj);
+                    }
+                });
             }
 
             @Override

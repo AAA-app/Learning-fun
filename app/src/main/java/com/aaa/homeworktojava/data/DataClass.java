@@ -5,13 +5,13 @@ public class DataClass {
     private String description;
     private String image;
     private String radioUrl;
-    private String fragmentUrl;
+    private String url;
 
-    public DataClass(String description, String image, String radioUrl, String fragmentUrl) {
+    public DataClass(String description, String image, String radioUrl, String url) {
         this.description = description;
         this.image = image;
         this.radioUrl = radioUrl;
-        this.fragmentUrl = fragmentUrl;
+        this.url = url;
     }
 
     public DataClass() {
@@ -36,6 +36,6 @@ public class DataClass {
         this.radioUrl = radioUrl;
     }
 
-    public String getFragmentUrl() { return fragmentUrl; }
-    public void setFragmentUrl(String fragmentUrl) { this.fragmentUrl = fragmentUrl; }
+    public String getUrl() { return url; }
+    public void setUrl(String url) { this.url = url; }
 }

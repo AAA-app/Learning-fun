@@ -47,14 +47,16 @@ import java.util.Objects;
 
 public class FragmentRadio extends Fragment {
 
-    DatabaseReference mRef;
+
     private ArrayList<DataClass> listData = new ArrayList<DataClass>();
     RecyclerView recyclerView;
     SeekBar seekBar;
     RadioAdapter mAdapter;
     MediaPlayer mediaPlayer;
-    ImageView toolbarImg = MainActivity.mImageView;
     private Handler myHandler = new Handler();
+    Utils utils = new Utils();
+    //"DataClass" here will reflect what you have called your database in Firebase.
+    DatabaseReference mRef= utils.getmRef().child("DataRadio");
 
 
     public FragmentRadio() {
@@ -65,11 +67,6 @@ public class FragmentRadio extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
-//"News" here will reflect what you have called your database in Firebase.
-        mRef = FirebaseDatabase.getInstance().getReference().child("DataRadio");
-        mRef.keepSynced(true);
         return inflater.inflate(R.layout.rv_list, container, false);
     }
 
@@ -82,6 +79,7 @@ public class FragmentRadio extends Fragment {
         seekBar = (SeekBar) view.findViewById(R.id.seekBar);
         seekBar.setVisibility(View.VISIBLE) ;
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
+
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -217,9 +215,9 @@ public class FragmentRadio extends Fragment {
             if (cursor.moveToFirst()) {
                 do {
 //                    String description = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DISPLAY_NAME));
-                    String url = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DATA));
+                    String radioUrl = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DATA));
 
-                    DataClass dataClass = new DataClass(null, null, url);
+                    DataClass dataClass = new DataClass(null, null, radioUrl, null);
                     listData.add(dataClass);
 
                 } while (cursor.moveToNext());
