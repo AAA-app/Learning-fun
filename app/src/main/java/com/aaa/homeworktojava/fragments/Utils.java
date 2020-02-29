@@ -20,6 +20,7 @@ public class Utils {
         mRef.keepSynced(true);
         return mRef;
     }
+
     //get url go to webSite
     public void clickWebview(Context context, DataClass obj) {
         Toast.makeText(context, "place white..", Toast.LENGTH_SHORT).show();
@@ -29,6 +30,7 @@ public class Utils {
         intent.putExtra("id", url);
         context.startActivity(intent);
     }
+
     // layout options
     public void LayoutOptions(RecyclerView recyclerView, Context context) {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);

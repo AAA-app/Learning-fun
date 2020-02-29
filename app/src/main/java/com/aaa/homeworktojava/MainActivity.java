@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-
 import com.aaa.homeworktojava.fragments.FragmentAlgorithms;
 import com.aaa.homeworktojava.fragments.FragmentAnimation;
 import com.aaa.homeworktojava.fragments.FragmentKotlin;
@@ -18,7 +17,6 @@ import com.aaa.homeworktojava.fragments.FragmentRadio;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.tabs.TabLayout;
 import com.q42.android.scrollingimageview.ScrollingImageView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     private CollapsingToolbarLayout mToolBar;
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
-    public static ImageView mImageView;
 
 
     @Override
@@ -46,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
         mToolBar = findViewById(R.id.toolBar);
         mTabLayout = findViewById(R.id.tabLayout);
         mViewPager = findViewById(R.id.viewPager);
-
-//        mImageView =  findViewById(R.id.image_tv_toolbar);
 
         mToolBar.setTitle("Java Tutorial");
         setupViewPager(mViewPager);

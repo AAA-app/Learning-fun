@@ -2,33 +2,24 @@ package com.aaa.homeworktojava.fragments;
 
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.aaa.homeworktojava.MainActivity;
 import com.aaa.homeworktojava.R;
 import com.aaa.homeworktojava.adapter.RvAdapter;
 import com.aaa.homeworktojava.data.DataClass;
-import com.aaa.homeworktojava.webview.WebView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.ArrayList;
 
 
@@ -42,8 +33,6 @@ public class FragmentLogic extends Fragment {
     //"DataClass" here will reflect what you have called your database in Firebase.
     DatabaseReference mRef= utils.getmRef().child("DataLogic");
 
-
-
     public FragmentLogic() {
         // Required empty public constructor
     }
@@ -54,7 +43,6 @@ public class FragmentLogic extends Fragment {
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.rv_list, container, false);
     }
-
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {

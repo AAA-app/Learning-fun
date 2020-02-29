@@ -6,13 +6,10 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import com.aaa.homeworktojava.R;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+
 
 public class WebView extends AppCompatActivity {  
 

@@ -28,15 +28,12 @@ public class SplashActivity extends AppCompatActivity {
 
         ScrollingImageView scrollingBackground = (ScrollingImageView)findViewById(R.id.scrolling_background);
         scrollingBackground.start();
-
         // Animation background ****
 //        ConstraintLayout constraintLayout = findViewById(R.id.splash_layout);
 //        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground() ;
 //        animationDrawable.setEnterFadeDuration(20);
 //        animationDrawable.setExitFadeDuration(400);
 //        animationDrawable.start();
-
-
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         textView = (TextView) findViewById(R.id.textView);
         // Start long running operation in a background thread
@@ -64,21 +61,13 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
 
 // Using handler with postDelayed called runnable run method
-
             @Override
-
             public void run() {
-
                 Intent i = new Intent(SplashActivity.this, MainActivity.class);
-
                 startActivity(i);
-
                 // close this activity
-
                 finish();
-
             }
-
         }, 3*1000); // wait for 5 seconds
     }
 }

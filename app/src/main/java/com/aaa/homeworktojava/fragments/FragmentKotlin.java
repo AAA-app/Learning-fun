@@ -1,40 +1,28 @@
 package com.aaa.homeworktojava.fragments;
 
 import android.content.Context;
-//import android.graphics.drawable.AnimationDrawable;
-import androidx.annotation.DrawableRes;
-import androidx.annotation.AnimatorRes.*;
-//import android.graphics.drawable.AnimationDrawable;
-import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.Toast;
-import com.aaa.homeworktojava.MainActivity;
 import com.aaa.homeworktojava.R;
 import com.aaa.homeworktojava.adapter.RvAdapter;
 import com.aaa.homeworktojava.data.DataClass;
-import com.aaa.homeworktojava.webview.WebView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 
 public class FragmentKotlin extends Fragment {
-
 
     RecyclerView recyclerView;
     ArrayList<DataClass> listData;
@@ -42,7 +30,6 @@ public class FragmentKotlin extends Fragment {
     Utils utils = new Utils();
     //"DataClass" here will reflect what you have called your database in Firebase.
     DatabaseReference mRef= utils.getmRef().child("DataGirls");
-
 
     public FragmentKotlin() {
         // Required empty public constructor
@@ -62,9 +49,6 @@ public class FragmentKotlin extends Fragment {
 
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
-
-
-
 
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
