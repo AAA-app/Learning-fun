@@ -1,31 +1,39 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:scrolling_image_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/splash_layout"
-
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
 
-    <FrameLayout
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:src="@drawable/bubles"
+        android:scaleType="fitXY" />
 
 
-        <com.q42.android.scrollingimageview.ScrollingImageView
-            android:id="@+id/scrolling_background"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitCenter"
-            scrolling_image_view:speed="1dp"
-            scrolling_image_view:src="@mipmap/screenbackground" />
-    </FrameLayout>
+    <!--    <FrameLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+
+    <!--        <com.q42.android.scrollingimageview.ScrollingImageView-->
+    <!--            android:id="@+id/scrolling_background"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:scaleType="fitCenter"-->
+    <!--            scrolling_image_view:speed="1dp"-->
+    <!--            scrolling_image_view:src="@mipmap/screenbackground" />-->
+    <!--    </FrameLayout>-->
 
     <com.tomer.fadingtextview.FadingTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="228dp"
         android:fontFamily="@font/black_ops_one"
         android:gravity="center"
         android:shadowColor="@color/blackBlue"
@@ -33,9 +41,7 @@
         android:shadowDy="5"
         android:shadowRadius="5"
         android:textColor="@color/white"
-        android:outlineSpotShadowColor="@color/colorPrimaryDark"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -75,27 +81,29 @@
         android:id="@+id/textView"
         android:layout_width="92dp"
         android:layout_height="25dp"
-        android:textColor="@color/white"
-        android:visibility="invisible"
         android:layout_below="@+id/progressBar"
         android:layout_alignLeft="@+id/progressBar"
+        android:textColor="@color/white"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/progressBar"
         app:layout_constraintStart_toStartOf="@+id/progressBar"
         app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="250dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginRight="80dp"
-        android:layout_marginBottom="64dp"
-        android:src="@drawable/android"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar_cyclic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imageView"-->
+    <!--        android:layout_width="250dp"-->
+    <!--        android:layout_height="150dp"-->
+    <!--        android:layout_marginStart="80dp"-->
+    <!--        android:layout_marginLeft="80dp"-->
+    <!--        android:layout_marginEnd="80dp"-->
+    <!--        android:layout_marginRight="80dp"-->
+    <!--        android:layout_marginBottom="64dp"-->
+    <!--        android:src="@drawable/android"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/progressBar_cyclic"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

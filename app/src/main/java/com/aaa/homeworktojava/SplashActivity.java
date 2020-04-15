@@ -26,8 +26,8 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        ScrollingImageView scrollingBackground = (ScrollingImageView)findViewById(R.id.scrolling_background);
-        scrollingBackground.start();
+//        ScrollingImageView scrollingBackground = (ScrollingImageView)findViewById(R.id.scrolling_background);
+//        scrollingBackground.start();
         // Animation background ****
 //        ConstraintLayout constraintLayout = findViewById(R.id.splash_layout);
 //        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground() ;

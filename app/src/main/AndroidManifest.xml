@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SplashActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".ActTest1" />
         <activity android:name=".webview.WebView" />
 <!--        <activity android:name=".webview.WebActivity" />-->
