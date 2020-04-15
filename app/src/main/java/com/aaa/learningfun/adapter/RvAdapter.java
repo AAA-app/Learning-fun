@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import com.aaa.LearningFun.R;
+import com.aaa.learningfun.R;
 import com.aaa.learningfun.data.DataClass;
 import com.bumptech.glide.Glide;
 import java.util.ArrayList;

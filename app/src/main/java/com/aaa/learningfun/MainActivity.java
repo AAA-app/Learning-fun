@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-import com.aaa.LearningFun.R;
 import com.aaa.learningfun.fragments.FragmentAnimation;
 import com.aaa.learningfun.fragments.FragmentJava;
 import com.aaa.learningfun.fragments.FragmentKotlin;

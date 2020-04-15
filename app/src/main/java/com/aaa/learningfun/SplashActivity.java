@@ -7,8 +7,6 @@ import android.os.Handler;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import com.aaa.LearningFun.R;
-
 
 
 public class SplashActivity extends AppCompatActivity {

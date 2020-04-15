@@ -1,7 +1,6 @@
-package com.aaa.LearningFun;
+package com.aaa.learningfun;
 
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 
 /**
