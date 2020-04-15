@@ -8,7 +8,7 @@
     android:layout_height="250dp"
 
     android:orientation="vertical"
-    tools:context="com.aaa.homeworktojava.MainActivity">
+    tools:context="com.aaa.LearningFun.MainActivity">
 
     <FrameLayout
         android:layout_width="match_parent"

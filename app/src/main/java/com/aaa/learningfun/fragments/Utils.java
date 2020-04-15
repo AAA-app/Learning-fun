@@ -1,15 +1,13 @@
-package com.aaa.homeworktojava.fragments;
+package com.aaa.learningfun.fragments;
 
 import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
-
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.aaa.homeworktojava.data.DataClass;
-import com.aaa.homeworktojava.webview.WebView;
+import com.aaa.learningfun.data.DataClass;
+import com.aaa.learningfun.webview.WebView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 

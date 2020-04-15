@@ -8,20 +8,12 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:421847461046:android:00a90953b89464e0cc8a17",
+        "mobilesdk_app_id": "1:421847461046:android:a8198b1829f33e53cc8a17",
         "android_client_info": {
-          "package_name": "com.aaa.homeworktojava"
+          "package_name": "com.aaa.learningfun"
         }
       },
       "oauth_client": [
-        {
-          "client_id": "421847461046-kep9drdcjbnqkfikna0ejo3q0l8uv5ss.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.aaa.homeworktojava",
-            "certificate_hash": "64fbb558d722348117eb05a6d055ae8afdcb7f80"
-          }
-        },
         {
           "client_id": "421847461046-0e8s89j5p6d8fu88i6kajjr619kv3qro.apps.googleusercontent.com",
           "client_type": 3
@@ -29,7 +21,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAeNJvnQQOK9QG1DcXNDyCytfGC3Lld-Qc"
+          "current_key": "AIzaSyC-70R8z_RfVzuwzynodjpkr-n3Cgj-Xdo"
         }
       ],
       "services": {

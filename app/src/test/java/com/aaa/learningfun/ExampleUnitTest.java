@@ -1,4 +1,4 @@
-package com.aaa.homeworktojava;
+package com.aaa.LearningFun;
 
 import org.junit.Test;
 

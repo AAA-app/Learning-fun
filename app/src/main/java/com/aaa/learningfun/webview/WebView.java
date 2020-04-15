@@ -1,4 +1,4 @@
-package com.aaa.homeworktojava.webview;
+package com.aaa.learningfun.webview;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import com.aaa.homeworktojava.R;
+import com.aaa.LearningFun.R;
 
 
 public class WebView extends AppCompatActivity {  

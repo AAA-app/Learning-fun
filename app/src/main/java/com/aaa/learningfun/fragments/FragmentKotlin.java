@@ -1,21 +1,20 @@
-package com.aaa.homeworktojava.fragments;
-
+package com.aaa.learningfun.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.aaa.homeworktojava.R;
-import com.aaa.homeworktojava.adapter.RvAdapter;
-import com.aaa.homeworktojava.data.DataClass;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Toast;
+import com.aaa.LearningFun.R;
+import com.aaa.learningfun.adapter.RvAdapter;
+import com.aaa.learningfun.data.DataClass;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -23,25 +22,24 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 
-public class FragmentLogic extends Fragment {
-
+public class FragmentKotlin extends Fragment {
 
     RecyclerView recyclerView;
     ArrayList<DataClass> listData;
     RvAdapter mAdapter;
     Utils utils = new Utils();
     //"DataClass" here will reflect what you have called your database in Firebase.
-    DatabaseReference mRef= utils.getmRef().child("DataLogic");
+    DatabaseReference mRef= utils.getmRef().child("DataGirls");
 
-    public FragmentLogic() {
+    public FragmentKotlin() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.rv_list, container, false);
+        View view =  inflater.inflate(R.layout.rv_list, container, false);
+        return view;
     }
 
     @Override
@@ -55,7 +53,7 @@ public class FragmentLogic extends Fragment {
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-               listData = new ArrayList<DataClass>();
+                listData = new ArrayList<DataClass>();
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
                     DataClass dataClass = dataSnapshot1.getValue(DataClass.class);
                     listData.add(dataClass);
@@ -81,3 +79,4 @@ public class FragmentLogic extends Fragment {
         });
     }
 }
+

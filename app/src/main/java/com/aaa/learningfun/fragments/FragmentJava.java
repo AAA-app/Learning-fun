@@ -1,8 +1,6 @@
-package com.aaa.homeworktojava.fragments;
-
+package com.aaa.learningfun.fragments;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,13 +10,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.aaa.homeworktojava.R;
-import com.aaa.homeworktojava.adapter.RvAdapter;
-import com.aaa.homeworktojava.data.DataClass;
-import com.aaa.homeworktojava.webview.WebView;
+import com.aaa.LearningFun.R;
+import com.aaa.learningfun.adapter.RvAdapter;
+import com.aaa.learningfun.data.DataClass;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,7 +28,7 @@ public class FragmentJava extends Fragment {
     RecyclerView recyclerView;
     ArrayList<DataClass> listData;
     RvAdapter mAdapter;
-    Utils utils = new Utils();
+   Utils utils = new Utils();
     //"DataClass" here will reflect what you have called your database in Firebase.
     DatabaseReference mRef= utils.getmRef().child("DataCars");
 

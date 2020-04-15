@@ -1,4 +1,4 @@
-package com.aaa.homeworktojava.fragments;
+package com.aaa.learningfun.fragments;
 
 
 import android.content.Context;
@@ -22,9 +22,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.aaa.homeworktojava.R;
-import com.aaa.homeworktojava.adapter.RadioAdapter;
-import com.aaa.homeworktojava.data.DataClass;
+import com.aaa.LearningFun.R;
+import com.aaa.learningfun.adapter.RadioAdapter;
+import com.aaa.learningfun.data.DataClass;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -42,7 +42,7 @@ public class FragmentRadio extends Fragment {
     RadioAdapter mAdapter;
     MediaPlayer mediaPlayer;
     private Handler myHandler = new Handler();
-    Utils utils = new Utils();
+   Utils utils = new Utils();
     //"DataClass" here will reflect what you have called your database in Firebase.
     DatabaseReference mRef= utils.getmRef().child("DataRadio");
 

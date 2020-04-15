@@ -1,4 +1,4 @@
-package com.aaa.homeworktojava.data;
+package com.aaa.learningfun.data;
 
 public class DataClass {
 

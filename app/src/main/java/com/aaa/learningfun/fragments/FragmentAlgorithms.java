@@ -1,4 +1,4 @@
-package com.aaa.homeworktojava.fragments;
+package com.aaa.learningfun.fragments;
 
 
 import android.content.Context;
@@ -13,9 +13,9 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.aaa.homeworktojava.R;
-import com.aaa.homeworktojava.adapter.RvAdapter;
-import com.aaa.homeworktojava.data.DataClass;
+import com.aaa.LearningFun.R;
+import com.aaa.learningfun.adapter.RvAdapter;
+import com.aaa.learningfun.data.DataClass;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

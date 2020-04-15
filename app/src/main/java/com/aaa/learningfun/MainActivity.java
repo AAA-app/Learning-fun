@@ -1,19 +1,17 @@
-package com.aaa.homeworktojava;
+package com.aaa.learningfun;
 
 import android.os.Bundle;
-import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-import com.aaa.homeworktojava.fragments.FragmentAlgorithms;
-import com.aaa.homeworktojava.fragments.FragmentAnimation;
-import com.aaa.homeworktojava.fragments.FragmentKotlin;
-import com.aaa.homeworktojava.fragments.FragmentJava;
-import com.aaa.homeworktojava.fragments.FragmentLogic;
-import com.aaa.homeworktojava.fragments.FragmentRadio;
+import com.aaa.LearningFun.R;
+import com.aaa.learningfun.fragments.FragmentAnimation;
+import com.aaa.learningfun.fragments.FragmentJava;
+import com.aaa.learningfun.fragments.FragmentKotlin;
+import com.aaa.learningfun.fragments.FragmentRadio;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.tabs.TabLayout;
 import com.q42.android.scrollingimageview.ScrollingImageView;

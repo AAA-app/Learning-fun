@@ -1,17 +1,14 @@
-package com.aaa.homeworktojava;
+package com.aaa.learningfun;
 
 
 import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import com.aaa.LearningFun.R;
 
-import com.q42.android.scrollingimageview.ScrollingImageView;
 
 
 public class SplashActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.aaa.homeworktojava.adapter;
+package com.aaa.learningfun.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,8 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import com.aaa.homeworktojava.R;
-import com.aaa.homeworktojava.data.DataClass;
+import com.aaa.LearningFun.R;
+import com.aaa.learningfun.data.DataClass;
 import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
